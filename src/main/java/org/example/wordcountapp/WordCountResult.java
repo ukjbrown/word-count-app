@@ -33,14 +33,14 @@ public class WordCountResult
     private void sort()
     {
         // Sort the map by value (descending), using the key (word) as secondary sort to ensure consistency
-        this.sortedWordCounts = wordCounts.entrySet().stream()
+        sortedWordCounts = wordCounts.entrySet().stream()
                 .sorted((entry1, entry2) -> {
                     int result = entry2.getValue().compareTo(entry1.getValue());
                     return result == 0 ? entry1.getKey().compareTo(entry2.getKey()) : result;
                 })
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (entry1, entry2) -> entry1, LinkedHashMap::new));
         
-        this.sorted = true;
+        sorted = true;
     }
 
     /**
