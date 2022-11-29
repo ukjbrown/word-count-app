@@ -52,7 +52,7 @@ public class WordCounterStringTests
     @Test
     public void punctuationVarietyTest()
     {
-        String expected = "hello: 4\nworld: 3";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 3");
 
         WordCounter wordCounter = new WordCounter();
 
@@ -76,7 +76,7 @@ public class WordCounterStringTests
     @Test
     public void letterCasingTest()
     {
-        String expected = "hello: 4\nworld: 3";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 3");
         WordCounter wordCounter = new WordCounter();
 
         String input = "hello HELLO wORLd worlD World hello HELlo";
@@ -90,7 +90,7 @@ public class WordCounterStringTests
     @Test
     public void wordsWithSameNumberOfOccurrenceTest()
     {
-        String expected = "aaa: 3\nbbb: 3\nccc: 3\naa: 2\nbb: 2";
+        String expected = TestHelper.fixNewlines("aaa: 3\nbbb: 3\nccc: 3\naa: 2\nbb: 2");
 
         WordCounter wordCounter = new WordCounter();
 

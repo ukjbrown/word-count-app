@@ -58,6 +58,6 @@ public class WordCountResult
         return sortedWordCounts.entrySet()
                 .stream()
                 .map(entry -> String.format("%s: %d", entry.getKey(), entry.getValue()))
-                .collect(Collectors.joining("\n"));
+                .collect(Collectors.joining(System.lineSeparator()));
     }
 }

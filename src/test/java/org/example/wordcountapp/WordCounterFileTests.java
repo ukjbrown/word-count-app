@@ -13,7 +13,7 @@ public class WordCounterFileTests
     @Test
     public void simpleWordCountTestFromFile() throws Exception
     {
-        String expected = "hello: 4\nworld: 3";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 3");
         WordCounter wordCounter = new WordCounter();
 
         String inputFilePath = getClass().getClassLoader().getResource("simple-word-count-test.txt").getFile();
@@ -29,7 +29,7 @@ public class WordCounterFileTests
     @Test
     public void changingWordOrderTest() throws Exception
     {
-        String expected = "hello: 4\nworld: 3";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 3");
         WordCounter wordCounter = new WordCounter();
 
         String inputFilePath1 = getClass().getClassLoader().getResource("changing-word-order-test-1.txt").getFile();
@@ -51,7 +51,7 @@ public class WordCounterFileTests
     @Test
     public void multiLineFileTest() throws Exception
     {
-        String expected = "hello: 4\nworld: 4\nlast: 1";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 4\nlast: 1");
         WordCounter wordCounter = new WordCounter();
 
         String inputFilePath = getClass().getClassLoader().getResource("multi-line-file-test.txt").getFile();
