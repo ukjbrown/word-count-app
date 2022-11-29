@@ -39,11 +39,13 @@ public class WordCountResult
                     return result == 0 ? entry1.getKey().compareTo(entry2.getKey()) : result;
                 })
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (entry1, entry2) -> entry1, LinkedHashMap::new));
+        
+        this.sorted = true;
     }
 
     /**
      * Convert the results map to a string of newline-separated "key: value" pairs
-     * 
+     *
      * @return string representation of the result
      */
     @Override
