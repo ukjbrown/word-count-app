@@ -15,7 +15,7 @@ public class WordCounterStringTests
     @Test
     public void simpleWordCountTest()
     {
-        String expected = "hello: 4\nworld: 3";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 3");
         WordCounter wordCounter = new WordCounter();
 
         String input = "hello hello world world world hello hello";
@@ -29,7 +29,7 @@ public class WordCounterStringTests
     @Test
     public void changingWordOrderTest()
     {
-        String expected = "hello: 4\nworld: 3";
+        String expected = TestHelper.fixNewlines("hello: 4\nworld: 3");
         WordCounter wordCounter = new WordCounter();
 
         String input1 = "hello world hello world hello world hello";
