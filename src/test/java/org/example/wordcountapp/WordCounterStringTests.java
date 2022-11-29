@@ -3,7 +3,11 @@ package org.example.wordcountapp;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class WordCounterTests
+import java.io.File;
+import java.net.URI;
+import java.net.URL;
+
+public class WordCounterStringTests
 {
     /**
      * Basic test that the correct word counts are produced
